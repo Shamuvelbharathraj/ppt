@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylle.css">
+    <style>
+      @font-face {
+        font-family: aaa;
+        src: url(Tinos-Regular.ttf);
+      }
+      *{
+        font-family: aaa;
+      }
+      h1{
+        text-align: center;
+        font-size:40px;
+      }
+
+      li{
+        font-size: 20px;
+      }
+
+      .inline{
+        display:flex;
+      }
+      .inline li{
+        margin-right: 5rem;
+        list-style-type: square;
+      }
+
+      #differ li{
+        margin-bottom: 7px;
+      }
+
+      #m-differ li{
+        font-size: 23px;
+        margin-bottom: 7px;
+      }
+      .center{
+        justify-content: center;
+      }
+    </style>
+</head>
+<body onload="open()">
+    <div id="sky" style="width: 30vw;">
+        <div class="bird">
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="wind"></div>
+          <div class="bird_body">
+            <div class="bird_head"></div>
+            <div class="bird_wing_left">
+              <div class="bird_wing_left_top"></div>
+            </div>
+            <div class="bird_wing_right">
+              <div class="bird_wing_right_top"></div>
+            </div>
+            <div class="bird_tail_left"></div>
+            <div class="bird_tail_right"></div>
+          </div>
+        </div>
+    </div>
+
+    <div id="one" style="opacity:0;background-color:rgb(126,126,207,.4);height:85vh;width:88vw;box-shadow: 0px 0px 20px 5px black;position:absolute;top:0px;left:0px;margin:7.5vh 6vw;border-radius:10px;overflow:auto;line-break:auto;">
+        <h1>About My Self</h1>
+        <ul id="differ">
+          <li>People call me <b>Bharathraj</b>, studying bachelors degree in the department of Computer Science and Engineering at Jai Shriram Engineering College, Tirupur.</li>
+          <li>Interested in Fullstack development and Internet of things, at the same time ready to improve my skills.
+          <li>Developed two <b>Industrial projects</b> in the six month duration for Barani Hydrolics India Private Limited, This two projects are reduce their manpower drawbacks.</li>
+          <ul class="inline">
+            <li>Assembly Contoller</li>
+            <li>Package Manager</li>
+          </ul>
+          <li>and involved to develop a three <b>mini project</b> in my college Nova contest.</li>
+          <ul class="inline">
+            <li>Stock Management System</li>
+            <li>Restricted area survilence system</li>
+            <li>Quiz Conductor</li>
+          </ul>
+          <li>completed three NPTEL courses with Elite certification, specially Achieved <b>Silver medal</b> in the title of "Problem Solving through Programming in C".</li>
+          <li>Technically strong in <b>C, Java, Python, JavaScript, Html, Php, Css, Sql database's.</b></li>
+          <li>Attended Two workshops based on "Internet of things" by V.S.B Engineering College and Jai Shriram Engineering College.</li>
+          <li>Team player and have an ability for handle team members.</li>
+          <li> Critical thinking and Motivate myself with my team members for done our jobs.</li>
+        </ul>
+    </div>
+
+    <div id="two" style="opacity:0;background-color:rgb(126,126,207,.4);height:85vh;width:88vw;box-shadow: 0px 0px 20px 5px black;position:absolute;top:0px;left:0px;margin:7.5vh 6vw;border-radius:10px;overflow:auto;line-break:auto;">
+      <h1>Why You Want 10 Lakh Salary</h1>
+      <ul id="m-differ" style="margin:5rem 0px 0px 0px;">
+        <li>First of all, I have a skillset on <b>backend development, frontend development and Problem solving through programming.</b></li>
+        <li>Experiance on successfully developing an project associated with Barani Hydrolics India Private Limited.</li>
+        <li>Team player so easily encage with your organization.</li>
+        <li>Handle different types of peoples and resolving their problems with my knowledge.</li>
+        <li>Interested to learn current technologies (Self Learner).</li>
+        <li>Perform multitasking for reduce dependency.</li>
+        <li>Put high effort to performing best in that role.</li>
+      </ul>
+  </div>
+
+  <div id="three" style="opacity:0;background-color:rgb(126,126,207,.4);height:85vh;width:88vw;box-shadow: 0px 0px 20px 5px black;position:absolute;top:0px;left:0px;margin:7.5vh 6vw;border-radius:10px;overflow:auto;line-break:auto;">
+    <h1 style="font-size: 50px;text-shadow:5px 5px 20px black;">Strength</h1>
+    <ul style="border:2px solid black;padding: 10px 0px;margin:0px 10px;" class="inline center">
+      <li>Quick Learner.</li>
+      <li>Adaptablility.</li>
+      <li>MultiTasker</li>
+    </ul>
+    <h1 style="font-size: 50px;text-shadow:5px 5px 20px black;">Weakness</h1>
+    <div style="border:2px solid black;padding: 10px 0px;margin:0px 10px;">
+      <ul class="inline center">
+        <li>Mental Pressure</li>
+      </ul>
+      <p style="text-align: center;font-size:20px;">that can Handled by 30 minutes of meditation, spending time with my family, playing games in this way that can be overcome.</p>
+
+    </div>
+</div>
+    
+<script>
+    let stage=1;
+
+    function disable()
+    {
+      document.onkeydown = function (e) 
+      {
+        return false;
+      }
+    }
+ 
+    function enable()
+    {
+      document.onkeydown = function (e) 
+      {
+        return true;
+      }
+    }
+
+    //fade and hide
+    function hide(a,val,b){
+      if(val<0){
+        display(b,0);
+        return;
+      }
+      document.getElementById(a).style.opacity=val;
+      setTimeout(() => {
+          hide(a,val-.1,b)
+      }, 200);
+    }
+
+    //fade and display
+    function display(a,val){
+      if(val>1){
+        enable()
+        return;
+      }
+      document.getElementById(a).style.opacity=val;
+      setTimeout(() => {
+        display(a,val+.1)
+      }, 200);
+    }
+
+    function change(a,b){
+        hide(a,.9,b)
+    }
+    
+    function open(){
+      disable();
+      setTimeout(() => {
+        display("one",0);
+      }, 2000);
+    }
+
+    window.addEventListener("keypress",(event)=>{
+      if(event.key=="Enter" && stage<3){
+        stage++;
+        if(stage==2){
+          disable();
+          change("one","two");
+        }
+        else if(stage==3){
+          disable();
+          change("two","three");
+        }
+      }
+      else if(event.key==" " && stage>1){
+        stage--;
+        if(stage==2){
+          disable();
+          change("three","two");
+        }
+        else if(stage==1){
+          disable();
+          change("two","one");
+        }
+
+      }
+    });
+
+
+    window.addEventListener("touchstart",(event)=>{
+      
+        stage++;
+        if(stage==2){
+          disable();
+          change("one","two");
+        }
+        else if(stage==3){
+          disable();
+          change("two","three");
+        }
+        else if(stage==4){
+          disable();
+          stage=1;
+          change("three","one");
+        }
+    })
+</script>
+</body>
+</html>
